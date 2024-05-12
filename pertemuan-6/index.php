@@ -9,7 +9,11 @@
 </head>
 <body>
     <form action="" method="POST">
-        <input type="text" name="name" value="Mzzqq">
+        <label>Input your name
+            <input type="text" name="name" value="Mzzqq" />
+        </label>
+        <button type="submit" name="proses-button">Proses Data</button>
+
     </form>
 </body>
 </html>
