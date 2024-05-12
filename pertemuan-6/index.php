@@ -8,6 +8,8 @@
     <title>6th</title>
 </head>
 <body>
-
+    <form action="" method="POST">
+        <input type="text" name="name" value="Mzzqq">
+    </form>
 </body>
 </html>
