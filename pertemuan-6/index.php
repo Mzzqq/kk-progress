@@ -3,6 +3,8 @@
     $nilai = $_POST['nilai'];
     $repeat = $_POST['repeat'];
 //    echo $npm . " " . $nilai;
+    $huruf_mutu = "";
+    if ()
 ?>
 
 <!doctype html>
