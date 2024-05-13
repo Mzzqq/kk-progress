@@ -1,3 +1,5 @@
+<?php include 'process_nilai.php'; ?>
+
 <!doctype html>
 <html lang="en">
 <head>
