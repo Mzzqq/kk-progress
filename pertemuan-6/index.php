@@ -19,7 +19,7 @@
     }
 
     for ($i = 0; $i < $repeat; $i++) {
-        echo "Nilai mata kuliah anda adalah " . $huruf_mutu . "<br>";
+        echo " <script>alert('". $npm . "Nilai mata kuliah anda adalah: " . $huruf_mutu . "')</script>";
     }
 
 
@@ -51,5 +51,10 @@
         <br>
         <button type="submit" name="proses-button">Proses Data</button>
     </form>
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
 </body>
 </html>
