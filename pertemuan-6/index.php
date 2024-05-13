@@ -20,7 +20,7 @@
     }
 
     for ($i = 0; $i < $repeat; $i++) {
-        echo "Nilai mata kuliah anda adalah " . $huruf_mutu;
+        echo "Nilai mata kuliah anda adalah " . $huruf_mutu . "<br>";
     }
 
 
