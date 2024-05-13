@@ -1,5 +1,4 @@
 <?php
-    session_start();
     $npm = $_POST['npm']; // mengarah ke name yang ada di tag input html
     $nilai = $_POST['nilai'];
     $repeat = $_POST['repeat'];
@@ -54,4 +53,3 @@
     </form>
 </body>
 </html>
-<?php session_destroy(); ?>
