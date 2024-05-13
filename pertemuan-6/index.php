@@ -24,6 +24,8 @@
         echo " <script>alert('". $npm . "Nilai mata kuliah anda adalah: " . $huruf_mutu . "')</script>";
     }
 
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
 
 
 ?>
