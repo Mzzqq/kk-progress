@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['proses-button'])) {
+//if (isset($_POST['proses-button'])) {
     $npm = $_POST['npm']; // mengarah ke name yang ada di tag input html
     $nilai = $_POST['nilai'];
     $repeat = $_POST['repeat'];
@@ -20,13 +20,13 @@ if (isset($_POST['proses-button'])) {
 //        echo "Nilai mata kuliah anda adalah " . $huruf_mutu;
     }
 
-    for ($i = 0; $i < $repeat; $i++) {
-        echo " <script>alert('" . $npm . "Nilai mata kuliah anda adalah: " . $huruf_mutu . "')</script>";
-    }
+//    for ($i = 0; $i < $repeat; $i++) {
+//
+//    }
+    echo " <script>alert('" . $npm . "Nilai mata kuliah anda adalah: " . $huruf_mutu . "')</script>";
 
 //        header("Location: " . $_SERVER['PHP_SELF']);
 //        exit();
 
-}
+//}
 
-?>
