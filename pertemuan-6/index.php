@@ -8,7 +8,7 @@
     <title>6th</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="process_nilai.php" method="POST">
         <label>
             NPM <input type="number" name="npm" value="" />
         </label>
