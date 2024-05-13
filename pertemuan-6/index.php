@@ -1,9 +1,11 @@
 <?php
-    $npm = $_POST['npm']; // mengarah ke name yang ada di tag input html
-    $nilai = $_POST['nilai'];
-    $repeat = $_POST['repeat'];
-//    echo $npm . " " . $nilai;
-    $huruf_mutu = "";
+    if (isset($_POST['proses-button'])) {
+        $npm = $_POST['npm']; // mengarah ke name yang ada di tag input html
+        $nilai = $_POST['nilai'];
+        $repeat = $_POST['repeat'];
+//      echo $npm . " " . $nilai;
+        $huruf_mutu = "";
+    }
 
     if (isset($nilai)) {
         if ($nilai >= 85) {
