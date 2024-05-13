@@ -21,6 +21,7 @@
         <label>
             Nilai <input type="number" name="nilai" value="" />
         </label>
+        <br>
         <button type="submit" name="proses-button">Proses Data</button>
     </form>
 </body>
