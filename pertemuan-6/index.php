@@ -51,10 +51,6 @@
         <br>
         <button type="submit" name="proses-button">Proses Data</button>
     </form>
-    <script>
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
-        }
-    </script>
+
 </body>
 </html>
