@@ -1,5 +1,5 @@
 <?php
-    $var1 = $_POST['name']; // mengarah ke name yang ada di tag input html
+    $var1 = $_GET['name']; // mengarah ke name yang ada di tag input html
     echo $var1;
 ?>
 
@@ -13,12 +13,11 @@
     <title>6th</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="" method="GET">
         <label>Input your name
             <input type="text" name="name" value="Mzzqq" />
         </label>
         <button type="submit" name="proses-button">Proses Data</button>
-
     </form>
 </body>
 </html>
