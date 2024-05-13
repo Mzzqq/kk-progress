@@ -1,5 +1,6 @@
 <?php
-    $var1 = $_POST['name'] // mengarah ke name yang ada di tag input html
+    $var1 = $_POST['name']; // mengarah ke name yang ada di tag input html
+    echo $var1;
 ?>
 
 <!doctype html>
