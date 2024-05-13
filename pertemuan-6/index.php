@@ -4,7 +4,15 @@
     $repeat = $_POST['repeat'];
 //    echo $npm . " " . $nilai;
     $huruf_mutu = "";
-    if ()
+    if ($nilai >= 85) {
+        $huruf_mutu = "A";
+    }elseif ($nilai >= 75) {
+        $huruf_mutu = "B";
+    }elseif ($nilai >= 65) {
+        $huruf_mutu = "C";
+    } else {
+        $huruf_mutu = "E";
+    }
 ?>
 
 <!doctype html>
