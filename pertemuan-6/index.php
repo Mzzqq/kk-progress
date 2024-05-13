@@ -1,6 +1,7 @@
 <?php
-    $var1 = $_GET['name']; // mengarah ke name yang ada di tag input html
-    echo $var1;
+    $npm = $_GET['npm']; // mengarah ke name yang ada di tag input html
+    $nilai = $_GET['nilai'];
+    echo $npm . " " . $nilai;
 ?>
 
 <!doctype html>
