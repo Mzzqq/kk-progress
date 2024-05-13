@@ -14,8 +14,12 @@
 </head>
 <body>
     <form action="" method="GET">
-        <label>Input your name
-            <input type="text" name="name" value="Mzzqq" />
+        <label>
+            NPM <input type="number" name="npm" value="" />
+        </label>
+        <br>
+        <label>
+            Nilai <input type="number" name="nilai" value="" />
         </label>
         <button type="submit" name="proses-button">Proses Data</button>
     </form>
