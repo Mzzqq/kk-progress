@@ -1,7 +1,8 @@
 <?php
-    $npm = $_GET['npm']; // mengarah ke name yang ada di tag input html
-    $nilai = $_GET['nilai'];
-    echo $npm . " " . $nilai;
+    $npm = $_POST['npm']; // mengarah ke name yang ada di tag input html
+    $nilai = $_POST['nilai'];
+    $repeat = $_POST['repeat'];
+//    echo $npm . " " . $nilai;
 ?>
 
 <!doctype html>
