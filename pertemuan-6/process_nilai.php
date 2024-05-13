@@ -18,12 +18,13 @@
             $huruf_mutu = "E";
         }
 //        echo "Nilai mata kuliah anda adalah " . $huruf_mutu;
+        echo $npm . " Nilai mata kuliah anda adalah: " . $huruf_mutu . "<br>" ;
     }
 
 //    for ($i = 0; $i < $repeat; $i++) {
 //
 //    }
-    echo " <script>alert('" . $npm . "Nilai mata kuliah anda adalah: " . $huruf_mutu . "')</script>";
+
 
 //        header("Location: " . $_SERVER['PHP_SELF']);
 //        exit();
