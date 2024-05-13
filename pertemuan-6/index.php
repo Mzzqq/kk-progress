@@ -15,6 +15,10 @@
         } else {
             $huruf_mutu = "E";
         }
+//        echo "Nilai mata kuliah anda adalah " . $huruf_mutu;
+    }
+
+    for ($i = 0; $i < $repeat; $i++) {
         echo "Nilai mata kuliah anda adalah " . $huruf_mutu;
     }
 
