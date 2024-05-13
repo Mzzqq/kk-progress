@@ -10,7 +10,7 @@
     <title>6th</title>
 </head>
 <body>
-    <form action="process_nilai.php" method="POST">
+    <form action="" method="POST">
         <label>
             NPM <input type="number" name="npm" value="" />
         </label>
