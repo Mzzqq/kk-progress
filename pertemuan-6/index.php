@@ -14,13 +14,17 @@
     <title>6th</title>
 </head>
 <body>
-    <form action="" method="GET">
+    <form action="" method="POST">
         <label>
             NPM <input type="number" name="npm" value="" />
         </label>
         <br>
         <label>
             Nilai <input type="number" name="nilai" value="" />
+        </label>
+        <br>
+        <label>
+            Ulangi <input type="number" name="repeat" value="" />
         </label>
         <br>
         <button type="submit" name="proses-button">Proses Data</button>
