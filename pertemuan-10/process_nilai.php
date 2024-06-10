@@ -1,10 +1,15 @@
 <?php
+
+include "koneksi.php";
+
 //if (isset($_POST['proses-button'])) {
     $npm = $_POST['npm']; // mengarah ke name yang ada di tag input html
     $nilai = $_POST['nilai'];
     $repeat = $_POST['repeat'];
 //      echo $npm . " " . $nilai;
     $huruf_mutu = "";
+
+    $query = mysqli_query($db, "INSERT into mahasiswa()")
 
 
     if (isset($nilai)) {
@@ -18,7 +23,7 @@
             $huruf_mutu = "E";
         }
 //        echo "Nilai mata kuliah anda adalah " . $huruf_mutu;
-        echo $npm . " Nilai mata kuliah anda adalah: " . $huruf_mutu . "<br>" ;
+//        echo $npm . " Nilai mata kuliah anda adalah: " . $huruf_mutu . "<br>" ;
     }
 
     for ($i = 0; $i < $repeat; $i++) {
