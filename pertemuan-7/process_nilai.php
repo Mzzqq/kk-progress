@@ -21,9 +21,9 @@
         echo $npm . " Nilai mata kuliah anda adalah: " . $huruf_mutu . "<br>" ;
     }
 
-//    for ($i = 0; $i < $repeat; $i++) {
-//
-//    }
+    for ($i = 0; $i < $repeat; $i++) {
+        echo $npm . " Nilai mata kuliah anda adalah: " . $huruf_mutu . "<br>" ;
+    }
 
 
 //        header("Location: " . $_SERVER['PHP_SELF']);
