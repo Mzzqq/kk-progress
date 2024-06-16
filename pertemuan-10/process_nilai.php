@@ -9,7 +9,9 @@ include "koneksi.php";
 //      echo $npm . " " . $nilai;
     $huruf_mutu = "";
 
-    $query = mysqli_query($db, "INSERT into mahasiswa()")
+    $query = mysqli_query($koneksi, "INSERT INTO mahasiswa (nama_mahasiswa, prodi) 
+                VALUES ('$nama_mhs','$prodi_mhs') ")
+    or die(mysqli_error($koneksi));
 
 
     if (isset($nilai)) {
