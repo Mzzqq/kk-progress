@@ -1,15 +1,25 @@
 <?php
 include "koneksi.php";
+
+if (isset($_GET['cari'])) {
+    $search = mysqli_real_escape_string($koneksi, $_GET['cari']); // Sanitize search term
+    $query = "SELECT * FROM mahasiswa WHERE nama_mahasiswa LIKE '%$search' OR prodi LIKE '%$search%' OR id LIKE '%$search%'";
+} else {
+    $query = "SELECT * FROM mahasiswa";
+}
+
+$result = mysqli_query($koneksi, $query);
+
 $data_edit = isset($_GET['id']) ? mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE id = " . $_GET['id'])) : null;
 ?>
 
 <html>
 <head>
     <title>Index</title>
-    <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="library/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link href="library/assets/styles.css" rel="stylesheet" media="screen">
-    <script src="library/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/library/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/library/assets/styles.css" rel="stylesheet" media="screen">
+    <script src="/library/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +38,7 @@ $data_edit = isset($_GET['id']) ? mysqli_fetch_assoc(mysqli_query($koneksi, "SEL
                             <div class="control-group">
                                 <label class="control-label" for="nama">NAMA MAHASISWA</label>
                                 <div class="controls">
-                                    <input type="text" class="input-xlarge focused" id="nama" name="nama" value="<?php echo isset($data_edit['nama_mahasiswa']) ? $data_edit['nama_mahasiswa'] : ''; ?>">  
+                                    <input type="text" class="input-xlarge focused" id="nama" name="nama" value="<?php echo isset($data_edit['nama_mahasiswa']) ? $data_edit['nama_mahasiswa'] : ''; ?>">
                                 </div>
                             </div>
 
@@ -54,6 +64,12 @@ $data_edit = isset($_GET['id']) ? mysqli_fetch_assoc(mysqli_query($koneksi, "SEL
         <div class="block">
             <div class="navbar navbar-inner block-header">
                 <div class="muted pull-left">Data Mahasiswa</div>
+                <form action="index.php" method="get">
+                    <label class="muted pull-left" style="padding-left: 50%" for="cari">Cari: </label>
+                    <input type="text" name="cari" class="" id="cari">
+                    <input type="submit" value="cari">
+                </form>
+
             </div>
             <div class="block-content collapse in">
                 <div class="span12">
@@ -68,7 +84,6 @@ $data_edit = isset($_GET['id']) ? mysqli_fetch_assoc(mysqli_query($koneksi, "SEL
                         </thead>
                         <tbody>
                         <?php
-                        $result = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
                         while ($data = mysqli_fetch_assoc($result)) {
                         ?>
                             <tr>
