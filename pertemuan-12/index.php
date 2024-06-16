@@ -78,14 +78,14 @@
                     <tbody>
 
                     <?php
-                    while($data = mysqli_fetch_assoc($query)) {
+                    while($data = mysqli_fetch_assoc($proses)) {
                         ?>
 
                         <tr>
                             <td><?php echo $data['id'] ?></td>
                             <td><?php echo $data['nama_mahasiswa'] ?></td>
                             <td><?php echo $data['prodi'] ?></td>
-                            <td>Edit | Hapus</td>
+                            <td>Edit | <a href="hapus_data.php?id=<?php echo $data['id']; ?>".>Hapus</a></td>
                         </tr>
                         <?php
                     }
