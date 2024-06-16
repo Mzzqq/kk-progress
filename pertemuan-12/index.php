@@ -1,7 +1,5 @@
 <?php
-    include "tampilkan_data.php";
-    $data_edit = isset($_GET['id']) ? mysqli_fetch_assoc(mysqli_query($db, "SELECT * FROM mahasiswa WHERE id = " . $_GET['id'])) : null;
-
+    include "tampilkan_data.php"
 ?>
 
 <!doctype html>
