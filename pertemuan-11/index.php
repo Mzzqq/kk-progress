@@ -78,7 +78,7 @@
                     <tbody>
 
                     <?php
-                    while($data = mysqli_fetch_assoc($proses)) {
+                    while($data = mysqli_fetch_assoc($query)) {
                         ?>
 
                         <tr>
