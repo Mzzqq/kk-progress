@@ -1,3 +1,7 @@
+<?php
+    include "tampilkan_data.php"
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +13,7 @@
 </head>
 <body>
 
+
 <div class="span9" id="content">
     <!-- morris stacked chart -->
     <div class="row-fluid">
@@ -19,41 +24,78 @@
             </div>
             <div class="block-content collapse in">
                 <div class="span12">
-                    <form action="process_nilai.php" method="POST" class="form-horizontal">
+                    <form action="process_nilai.php" method="POST">
                         <fieldset>
                             <legend>Input Nilai Mahasiswa</legend>
-                            <div class="control-group">
-                                <label class="control-label" for="npm">NPM MAHASISWA</label>
-                                <div class="controls">
-                                    <input type="number" name="npm" value="" class="input-xlarge focused" id="npm"/>
-                                </div>
-                            </div>
 
                             <div class="control-group">
-                                <label class="control-label" for="nilai">NILAI MAHASISWA</label>
+                                <label class="control-label" for="NPM">NAMA MAHASISWA</label>
                                 <div class="controls">
-                                    <input type="number" name="nilai" value="" class="input-xlarge focused" id="nilai"/>
+                                    <input type="text" class="input-xlarge focused" id="NPM" name="nama" value="">
                                 </div>
-                            </div>
 
-                            <div class="control-group">
-                                <label class="control-label" for="repeat">ULANGI</label>
-                                <div class="controls">
-                                    <input type="number" name="repeat" value="" class="input-xlarge focused" id="repeat"/>
-                                </div>
-                            </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="NPM">PRODI MAHASISWA</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-xlarge focused" id="npm" name="prodi" value="">
+                                    </div>
 
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary" name="proses-button">PROSES DATA</button>
-                                <button type="reset" class="btn">Cancel</button>
-                            </div>
-<!--                        </fieldset>-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="NPM">ULANGI</label>
+                                        <div class="controls">
+                                            <input type="text" class="input-xlarge focused" id="NPM" name="ulangi" value="">
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                            <button type="reset" class="btn">Cancel</button>
+                                        </div>
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<div class="row-fluid">
+    <!-- block -->
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">Data Mahasiswa</div>
+        </div>
+        <div class="block-content collapse in">
+            <div class="span12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>NPM Mahasiswa</th>
+                        <th>Nama Mahasiswa</th>
+                        <th>Prodi Mahasiswa</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <?php
+                    while($data = mysqli_fetch_assoc($proses)) {
+                        ?>
+
+                        <tr>
+                            <td><?php echo $data['id'] ?></td>
+                            <td><?php echo $data['nama_mahasiswa'] ?></td>
+                            <td><?php echo $data['prodi'] ?></td>
+                            <td>Edit | Hapus</td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /block -->
+</div>
 </body>
 </html>
